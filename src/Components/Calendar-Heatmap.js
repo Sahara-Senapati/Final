@@ -20,7 +20,11 @@ const Plot = createPlotlyComponent(Plotly);
 class  Calendar extends Component {
   render() {
     return (
-      <div>
+      <div className="body">
+      <h1>
+      Calendar Heatmap
+      </h1>
+
       <Plot className="plot"
         data={[
             {
@@ -31,9 +35,9 @@ class  Calendar extends Component {
               hoverongaps: false
             }
         ]}
-        layout={ {width:650, height: 650, title: 'Calendar Heatmap'} }
+        layout={ {width:750, height: 520} }
       />
-      <table id="data" class="table table-bordered">
+      <table id="data" >
         
         <tbody>
         <tr>

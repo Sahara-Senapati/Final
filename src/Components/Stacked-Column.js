@@ -17,27 +17,27 @@ const Plot = createPlotlyComponent(Plotly);
 
 
 
-class Spine extends Component {
+class Stacked extends Component {
   render() {
     return (
       <div className="body">
       <h1>
-      Spine
+      Stacked Column
       </h1>
       <Plot className="plot"
         data={[
-          {  name:'Men',
-             type: 'bar',
-             x: [43, 35, 22, 11, 3, 7],
-             y: [5, 10, 15, 20, 25, 30],
-             orientation: 'h'
-          },
-          {  name:'Women',
-             type: 'bar',
-             x: [-8, -5, -13, -24, -32, -45],
-             y: [5, 10, 15, 20, 25, 30],
-             orientation: 'h'
-          }
+            {
+              x: [1, 2, 3, 4, 5, 6],
+              y: [20, 34, 23, 15, 8, 37],
+              name: '2016 Sales ',
+              type: 'bar'
+              },
+              {
+              x: [1, 2, 3, 4, 5, 6],
+              y: [42, 18, 29,30, 51, 11],
+              name: '2017 Sales',
+              type: 'bar'
+              }
         ]}
         layout={ {width: 750, height: 520, barmode:'relative'} }
       />
@@ -46,11 +46,15 @@ class Spine extends Component {
         <tbody>
         <tr>
             <th> Title </th>
-            <td> Spine </td>
+            <td> Stacked Column </td>
           </tr>
           <tr>
             <th> Description</th>  
-            <td> Splits a single value into two contrasting components (eq male/female) </td>
+            <td> A simple way of showing part-to whole relationships but can be difficult to read with more than a few components </td>
+          </tr>
+          <tr>
+            <th> Type </th>
+            <td> Bar </td>
           </tr>
           <tr>
             <th> Data Format </th>
@@ -59,25 +63,22 @@ class Spine extends Component {
           <tr>
             <th> Trace 1 </th>
             <td> 
-            <tr> x: [43, 35, 22, 11, 3, 7] </tr> 
-             <tr> y: [5, 10, 15, 20, 25, 30] </tr>
+            <tr>  x: [1, 2, 3, 4, 5, 6] </tr> 
+             <tr>  y: [20, 34, 23, 15, 8, 37] </tr>
              </td>
           </tr>
           <tr>
             <th> Trace 2 </th>
             <td> 
-            <tr> x: [-8, -5, -13, -24, -32, -45] </tr> 
-             <tr> y: [5, 10, 15, 20, 25, 30]  </tr>
+            <tr> x: [1, 2, 3, 4, 5, 6] </tr> 
+             <tr> y: [42, 18, 29,30, 51, 11] </tr>
              </td>
           </tr>
           <tr>
-            <th> Orientation </th>
-            <td>h</td>
+            <th> Barmode </th>
+            <td> relative </td>
           </tr>
-          <tr>
-            <th> Type </th>
-            <td> Bar </td>
-          </tr>
+          
         </tbody>
       </table>
       </div>
@@ -85,4 +86,4 @@ class Spine extends Component {
   }
 }
 
-export default Spine;
+export default Stacked;

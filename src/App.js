@@ -16,7 +16,16 @@ import ColumnLine from "./Components/Column-Line";
 import Area from "./Components/Area-Chart";
 import Calendar from "./Components/Calendar-Heatmap";
 import Timeline from "./Components/Timeline";
-
+import Column from "./Components/Column";
+import Paired from "./Components/Paired-Column";
+import Radar from "./Components/Radar";
+import Bullet from "./Components/Bullet";
+import Stacked from "./Components/Stacked-Column";
+import Pie from "./Components/Pie-Chart";
+import Treemap from "./Components/Treemap";
+import Sankey from "./Components/Sankey";
+import Venn from "./Components/Venn-Diagram";
+import {Navigation} from "./Components/Navigation"
 
 
 import "./App.css";
@@ -25,7 +34,7 @@ import React, { Component } from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Switch
 } from "react-router-dom";
 
 
@@ -34,66 +43,11 @@ class App extends Component {
   return (
     <Router>
       <div>
-
-       <h1>
-         Plotly Charts
-       </h1>
-       <ol>
-       <li>
-         <Link to="/Diverging-Bar-Chart">Diverging Bar Chart </Link>
-       </li>
-       <li>
-         <Link to="/Spine">Spine </Link>
-       </li>
-       <li>
-         <Link to="/Scatter-Plot">Scatter Plot </Link>
-       </li>
-       <li>
-         <Link to="/Connected-Scatter-Plot"> Connected Scatter Plot </Link>
-       </li>
-       <li>
-         <Link to="/XY-Heatmap"> XY Heatmap </Link>
-       </li>
-       <li>
-         <Link to="/Ordered-Column"> Ordered Column</Link>
-       </li>
-       <li>
-         <Link to="/Dot-Strip-Plot"> Dot Strip Plot</Link>
-       </li>
-       <li>
-         <Link to="/Lollipop"> Lollipop </Link>
-       </li>
-       <li>
-         <Link to="/Histogram"> Histogram </Link>
-       </li>
-       <li>
-         <Link to="/Box-Plot"> Box Plot </Link>
-       </li>
-       <li>
-         <Link to="/Pyramid"> Pyramid </Link>
-       </li>
-       <li>
-         <Link to="/Frequency"> Frequency Polygons </Link>
-       </li>
-       <li>
-         <Link to="/Line"> Line </Link>
-       </li>
-       <li>
-         <Link to="/Column+Line"> Column + Line </Link>
-       </li>
-       <li>
-         <Link to="/Area"> Area Chart </Link>
-       </li>
-       <li>
-         <Link to="/Calendar"> Calendar Heatmap </Link>
-       </li>
-       <li>
-         <Link to="/Timeline"> Timeline </Link>
-       </li>
+      <Navigation/>
+       
+      <Switch>
       
-       </ol>
-      
-       <Route path="/Diverging-Bar-Chart">
+      <Route path="/Diverging-Bar-Chart">
           <Diverge />
        </Route>
        <Route path="/Spine">
@@ -134,8 +88,7 @@ class App extends Component {
        </Route>
        <Route path="/Column+Line">
           <ColumnLine />
-       </Route>
-       
+       </Route>       
        <Route path="/Area">
           <Area />
        </Route>
@@ -145,6 +98,38 @@ class App extends Component {
        <Route path="/Timeline">
           <Timeline />
        </Route>
+       <Route path="/Column">
+          <Column />
+       </Route>
+       <Route path="/Paired-Column">
+          <Paired />
+       </Route>
+       <Route path="/Radar">
+          <Radar />
+       </Route>
+       <Route path="/Bullet">
+          <Bullet />
+       </Route>
+       <Route path="/Stacked">
+          <Stacked />
+       </Route>
+       <Route path="/Pie">
+          <Pie />
+       </Route>
+       <Route path="/Treemap">
+          <Treemap />
+       </Route>
+       <Route path="/Sankey">
+          <Sankey />
+       </Route>
+       <Route path="/Venn">
+          <Venn />
+       </Route>
+       
+      
+      
+       
+        </Switch>
        
        
                  

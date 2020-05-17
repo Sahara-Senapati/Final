@@ -20,7 +20,10 @@ const Plot = createPlotlyComponent(Plotly);
 class BoxPlot extends Component {
   render() {
     return (
-      <div>
+      <div className="body">
+      <h1>
+      Box Plot
+      </h1>
       <Plot className="plot"
         data={[
             {
@@ -45,9 +48,9 @@ class BoxPlot extends Component {
             }
 
         ]}
-        layout={ {width: 750, height: 520, title: 'Box Plot'} }
+        layout={ {width: 750, height: 520} }
       />
-      <table id="data" class="table table-bordered">
+      <table id="data">
         
         <tbody>
         <tr>

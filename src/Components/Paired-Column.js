@@ -17,12 +17,12 @@ const Plot = createPlotlyComponent(Plotly);
 
 
 
-class Ordered extends Component {
+class Paired extends Component {
   render() {
     return (
       <div className="body">
       <h1>
-     Ordered Column
+      Paired Column
       </h1>
       <Plot className="plot"
         data={[
@@ -33,6 +33,14 @@ class Ordered extends Component {
               marker: {
              color: ['rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)']
               }
+            },
+            {
+              x: [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+              y: [53, 24, 47, 73, 8, 32, 60],
+              type: 'bar',
+              marker: {
+             color: ['rgb(180, 50, 70)','rgb(180, 50, 70)','rgb(180, 50, 70)','rgb(180, 50, 70)','rgb(180, 50, 70)','rgb(180, 50, 70)','rgb(180, 50, 70)']
+              }
             }
         ]}
         layout={ {width: 750, height: 520} }
@@ -42,11 +50,11 @@ class Ordered extends Component {
         <tbody>
         <tr>
             <th> Title </th>
-            <td> Ordered Column </td>
+            <td> Paired Column </td>
           </tr>
           <tr>
             <th> Description</th>  
-            <td> Standard bar charts display the ranks of values much more easily when sorted into order </td>
+            <td> As per standard column but allows for multiple series. Can become tricky to read with more than 2 series </td>
           </tr>
           <tr>
             <th> Type </th>
@@ -57,13 +65,24 @@ class Ordered extends Component {
             <td> Array </td>
           </tr>
           <tr>
-            <th> Data </th>
+            <th> Data 1 </th>
             <td> 
             <tr> x: [2014, 2015, 2016, 2017, 2018, 2019, 2020]
              </tr> 
              <tr>  y: [80, 54, 50, 35, 24, 10, 3] </tr>
              </td>
           </tr>
+          <tr>
+            <th> Data 2 </th>
+            <td> 
+            <tr> x: [2014, 2015, 2016, 2017, 2018, 2019, 2020]
+             </tr> 
+             <tr>  y: [53, 24, 47, 73, 8, 32, 60]</tr>
+             </td>
+          </tr>
+          
+          
+
           
         </tbody>
       </table>
@@ -72,4 +91,4 @@ class Ordered extends Component {
   }
 }
 
-export default Ordered;
+export default Paired;

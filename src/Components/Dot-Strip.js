@@ -20,7 +20,10 @@ const Plot = createPlotlyComponent(Plotly);
 class Dot extends Component {
   render() {
     return (
-      <div>
+      <div className="body">
+      <h1>
+      Dot Strip Plot
+      </h1>
       <Plot className="plot"
         data={[{
                  x: [1, 2, 3, 4, 5,6, 7, 8 , 9, 10],
@@ -56,9 +59,9 @@ class Dot extends Component {
                  }
                }
         ]}
-        layout={ {width: 750, height: 520, title: 'Dot Strip Plot'} }
+        layout={ {width: 750, height: 520} }
       />
-      <table id="data" class="table table-bordered">
+      <table id="data" >
         
         <tbody>
         <tr>

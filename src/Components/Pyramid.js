@@ -20,7 +20,10 @@ const Plot = createPlotlyComponent(Plotly);
 class Pyramid extends Component {
   render() {
     return (
-        <div>
+        <div className="body">
+        <h1>
+        Population Pyramid
+        </h1>
       <Plot className="plot"
         data={[{
                  
@@ -44,9 +47,9 @@ class Pyramid extends Component {
             
         ]}
         
-        layout={ {width: 750, height: 520, title: 'Population Pyramid', barmode: 'relative'} }
+        layout={ {width: 750, height: 520, barmode: 'relative'} }
       />
-      <table id="data" class="table table-bordered">
+      <table id="data">
         
         <tbody>
         <tr>

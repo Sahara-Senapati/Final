@@ -17,7 +17,10 @@ const Plot = createPlotlyComponent(Plotly);
 class Frequency extends Component {
   render() {
     return (
-        <div>
+        <div className="body">
+        <h1>
+        Frequency Polygons
+        </h1>
       <Plot className="plot"
         data={[
             {
@@ -45,9 +48,9 @@ class Frequency extends Component {
               }
             }
         ]}
-        layout={ {width: 750, height: 520, title: 'Frequency Polygons'} }
+        layout={ {width: 750, height: 520} }
       />
-      <table id="data" class="table table-bordered">
+      <table id="data">
         
         <tbody>
         <tr>
@@ -56,7 +59,7 @@ class Frequency extends Component {
           </tr>
           <tr>
             <th> Description</th>  
-            <td> A standard way for showing the age and sex breakdown of a population distrbution; effectively, back to back histograms </td>
+            <td> For displaying multiple distributions of data. Like a regular line chart, best limited to a maximum of 3 or 4 datasets </td>
           </tr>
           <tr>
             <th> Mode </th>

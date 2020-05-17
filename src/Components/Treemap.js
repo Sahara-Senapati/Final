@@ -17,53 +17,55 @@ const Plot = createPlotlyComponent(Plotly);
 
 
 
-class Ordered extends Component {
+class Treemap extends Component {
   render() {
     return (
       <div className="body">
       <h1>
-     Ordered Column
+      Treemap
       </h1>
       <Plot className="plot"
         data={[
             {
-              x: [2014, 2015, 2016, 2017, 2018, 2019, 2020],
-              y: [80, 54, 50, 35, 24, 10, 3],
-              type: 'bar',
-              marker: {
-             color: ['rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)']
-              }
+                  type: "treemap",
+                  labels: ["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
+                  parents: ["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve" ]
             }
         ]}
-        layout={ {width: 750, height: 520} }
+        layout={ {width: 750, height: 520, barmode:'relative'} }
       />
       <table id="data" >
         
         <tbody>
         <tr>
             <th> Title </th>
-            <td> Ordered Column </td>
+            <td> Treemap </td>
           </tr>
           <tr>
             <th> Description</th>  
-            <td> Standard bar charts display the ranks of values much more easily when sorted into order </td>
+            <td> Use for hierarchial part-to-whole relationships ; can be difficult to read when there are many small segments </td>
           </tr>
           <tr>
             <th> Type </th>
-            <td> Bar </td>
+            <td> treemap </td>
           </tr>
           <tr>
             <th> Data Format </th>
             <td> Array </td>
           </tr>
           <tr>
-            <th> Data </th>
+            <th> labels </th>
             <td> 
-            <tr> x: [2014, 2015, 2016, 2017, 2018, 2019, 2020]
-             </tr> 
-             <tr>  y: [80, 54, 50, 35, 24, 10, 3] </tr>
+            <tr>  ["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"] </tr> 
+            </td>
+          </tr>
+          <tr>
+            <th>  parents </th>
+            <td> 
+            <tr>  ["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve" ] </tr> 
              </td>
           </tr>
+          
           
         </tbody>
       </table>
@@ -72,4 +74,4 @@ class Ordered extends Component {
   }
 }
 
-export default Ordered;
+export default Treemap;

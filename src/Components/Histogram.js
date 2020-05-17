@@ -23,7 +23,10 @@ for (var i = 0; i < 100; i ++) {
 class Histogram extends Component {
   render() {
     return (
-      <div>
+      <div className="body">
+      <h1>
+      Histogram
+      </h1>
       <Plot className="plot"
         data={[
           {
@@ -32,9 +35,9 @@ class Histogram extends Component {
              
           }
         ]}
-        layout={ {width: 750, height: 520, title: 'Histogram'} }
+        layout={ {width: 750, height: 520} }
       />
-      <table id="data" class="table table-bordered">
+      <table id="data">
         
         <tbody>
         <tr>

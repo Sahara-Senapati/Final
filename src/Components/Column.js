@@ -17,23 +17,21 @@ const Plot = createPlotlyComponent(Plotly);
 
 
 
-class Ordered extends Component {
+class Column extends Component {
   render() {
     return (
       <div className="body">
       <h1>
-     Ordered Column
+      Column
       </h1>
       <Plot className="plot"
         data={[
             {
-              x: [2014, 2015, 2016, 2017, 2018, 2019, 2020],
-              y: [80, 54, 50, 35, 24, 10, 3],
-              type: 'bar',
-              marker: {
-             color: ['rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)']
-              }
-            }
+             x: [1, 2, 3, 4, 5, 6, 7],
+             y: [60, 23, 47, 40, 70, 17, 38],
+             type: 'bar'
+             }
+            
         ]}
         layout={ {width: 750, height: 520} }
       />
@@ -42,11 +40,11 @@ class Ordered extends Component {
         <tbody>
         <tr>
             <th> Title </th>
-            <td> Ordered Column </td>
+            <td> Column</td>
           </tr>
           <tr>
             <th> Description</th>  
-            <td> Standard bar charts display the ranks of values much more easily when sorted into order </td>
+            <td> The standard way to compare the size of things. Must always start at 0 on the axis </td>
           </tr>
           <tr>
             <th> Type </th>
@@ -59,9 +57,9 @@ class Ordered extends Component {
           <tr>
             <th> Data </th>
             <td> 
-            <tr> x: [2014, 2015, 2016, 2017, 2018, 2019, 2020]
+            <tr> x: [1, 2, 3, 4, 5, 6, 7]             
              </tr> 
-             <tr>  y: [80, 54, 50, 35, 24, 10, 3] </tr>
+             <tr>  y: [60, 23, 47, 40, 70, 17, 38] </tr>
              </td>
           </tr>
           
@@ -72,4 +70,4 @@ class Ordered extends Component {
   }
 }
 
-export default Ordered;
+export default Column;

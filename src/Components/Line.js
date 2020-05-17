@@ -22,7 +22,10 @@ function rand() {
 class Line extends Component {
   render() {
     return (
-      <div>
+      <div className="body">
+      <h1>
+      Line
+      </h1>
       <Plot className="plot"
         data={[
             {
@@ -31,9 +34,9 @@ class Line extends Component {
               line: {color: '#80CAF6'}
             }
         ]}
-        layout={ {width: 750, height: 520, title: 'Line'} }
+        layout={ {width: 750, height: 520} }
       />
-      <table id="data" class="table table-bordered">
+      <table id="data" >
         
         <tbody>
         <tr>

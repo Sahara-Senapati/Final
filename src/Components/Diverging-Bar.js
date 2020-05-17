@@ -20,7 +20,10 @@ const Plot = createPlotlyComponent(Plotly);
 class Diverge extends Component {
   render() {
     return (
-      <div>
+      <div className="body">
+      <h1>
+      Diverging Bar Graph
+      </h1>
        <Plot className="plot"
         data={[
           {
@@ -36,9 +39,9 @@ class Diverge extends Component {
              orientation: 'h'
           }
         ]}
-        layout={ {width: 750, height: 520, title: 'Diverging Bar Graph'} }
+        layout={ {width: 750, height: 520} }
       />
-      <table id="data" class="table table-bordered">
+      <table id="data">
         
         <tbody>
         <tr>

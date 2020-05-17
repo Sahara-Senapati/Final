@@ -17,37 +17,75 @@ const Plot = createPlotlyComponent(Plotly);
 
 
 
-class Area extends Component {
+class Venn extends Component {
   render() {
     return (
       <div className="body"> 
       <h1>
-        Area Chart
+        Venn Diagram
       </h1>
       <Plot className="plot"
         data={[
-          {
-            x: [1, 2, 3, 4],
-            y: [0, 2, 3, 5],
-            fill: 'tozeroy',
-            type: 'scatter'
-          },
-
-           {
-            x: [1, 2, 3, 4],
-            y: [3, 5, 4, 7],
-            fill: 'tonexty',
-            type: 'scatter'
-          },
-          {
-            x: [1, 2, 3, 4],
-            y: [4.5, 6, 5.5, 8],
-            fill: 'tonexty',
-            type: 'scatter'
-          }
+            {
+  x: [1, 1.75, 2.5],
+  y: [1, 1, 1],
+  type: 'scatter',
+  mode: 'text',
+  text: ['A', 'A+B', 'B'],
+  textfont: {
+    color: 'black',
+    size: 18,
+    family: 'Arial'
+  }
+            }
 
         ]}
-        layout={ {width: 750, height: 520} }
+        layout={ {width: 750, height: 520, 
+  xaxis: {
+    showticklabels: false,
+    autotick: false,
+    showgrid: false,
+    zeroline: false
+  },
+  yaxis: {
+    showticklabels: false,
+    autotick: false,
+    showgrid: false,
+    zeroline: false
+  },
+  shapes: [{
+    opacity: 0.3,
+    xref: 'x',
+    yref: 'y',
+    fillcolor: 'blue',
+    x0: 0,
+    y0: 0,
+    x1: 2,
+    y1: 2,
+    type: 'circle',
+    line: {
+      color: 'blue'
+    }
+  }, {
+    opacity: 0.3,
+    xref: 'x',
+    yref: 'y',
+    fillcolor: 'gray',
+    x0: 1.5,
+    y0: 0,
+    x1: 3.5,
+    y1: 2,
+    type: 'circle',
+    line: {
+      color: 'gray'
+    }
+  }],
+  margin: {
+    l: 20,
+    r: 20,
+    b: 100
+  }
+}} 
       />
       <table id="data" >
         
@@ -107,4 +145,4 @@ class Area extends Component {
     );
   }
 }
-export default Area;
+export default Venn;

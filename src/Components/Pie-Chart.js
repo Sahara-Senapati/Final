@@ -17,22 +17,19 @@ const Plot = createPlotlyComponent(Plotly);
 
 
 
-class Ordered extends Component {
+class Pie extends Component {
   render() {
     return (
       <div className="body">
       <h1>
-     Ordered Column
+      Pie Chart
       </h1>
       <Plot className="plot"
         data={[
             {
-              x: [2014, 2015, 2016, 2017, 2018, 2019, 2020],
-              y: [80, 54, 50, 35, 24, 10, 3],
-              type: 'bar',
-              marker: {
-             color: ['rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)','rgb(255, 144, 14)']
-              }
+              values: [30, 43, 8, 19],
+              labels: ['Summer', 'Winter', 'Spring', 'Autumn'],
+              type: 'pie'
             }
         ]}
         layout={ {width: 750, height: 520} }
@@ -42,11 +39,11 @@ class Ordered extends Component {
         <tbody>
         <tr>
             <th> Title </th>
-            <td> Ordered Column </td>
+            <td> Pie Chart </td>
           </tr>
           <tr>
             <th> Description</th>  
-            <td> Standard bar charts display the ranks of values much more easily when sorted into order </td>
+            <td> A common way of showing part-to-whole data - but be aware that its difficult to accurately compare the size of the segments</td>
           </tr>
           <tr>
             <th> Type </th>
@@ -57,13 +54,18 @@ class Ordered extends Component {
             <td> Array </td>
           </tr>
           <tr>
-            <th> Data </th>
+            <th>  Values </th>
             <td> 
-            <tr> x: [2014, 2015, 2016, 2017, 2018, 2019, 2020]
-             </tr> 
-             <tr>  y: [80, 54, 50, 35, 24, 10, 3] </tr>
+            <tr>  [30, 43, 8, 19]</tr>
              </td>
           </tr>
+          <tr>
+            <th> Labels </th>
+            <td> 
+            <tr> ['Summer', 'Winter', 'Spring', 'Autumn'] </tr> 
+             </td>
+          </tr>
+          
           
         </tbody>
       </table>
@@ -72,4 +74,4 @@ class Ordered extends Component {
   }
 }
 
-export default Ordered;
+export default Pie;

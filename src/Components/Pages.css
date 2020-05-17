@@ -1,27 +1,53 @@
 .plot{
-   margin-left:300px;
+   margin-left:360px;
    margin-top:0; 
+   padding:0;
 }
 p{
    text-align: left;
    font-size:16px;
    margin-left: 400px;
 }
-table {
-   border-collapse: collapse;
-     
-   margin-bottom: 100px;
 
- }
- 
- table, th, td {
+ table {
    border: 1px solid black;
+   border-collapse: collapse;
+   font-size:0.9em;
+   min-width: 400px;
+   border-radius:5px 5px 0 0;
+   overflow:hidden;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
    padding: 8px 30px 8px 30px;
+   margin:20px auto 40px auto;
    
  }
- table#data{
-    margin-left:auto;
-    margin-right:auto;
- 
+ th{
+    padding:12px 20px;
+    background-color: #29a19c;
+    color: #ffffff;
+    text-align:left;
+    font-size:16px;
  }
+ td{
+   padding:12px 20px;
+ }
+ h1{
+    text-align:center;
+    padding-top:50px;
+    padding-bottom:0;
+    color:#2a7886;
+ }
+ .body{
+    background-color:#edf7fa;
+ }
+ tr {
+   border-bottom:1px solid #dddddd;
+   background-color:#9dd8c8;
+   font-size:16px;
+ }
+ 
+ 
+ 
+
+ 
  

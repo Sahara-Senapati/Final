@@ -20,7 +20,10 @@ const Plot = createPlotlyComponent(Plotly);
 class Lollipop extends Component {
   render() {
     return (
-      <div>
+      <div className="body">
+      <h1>
+      Lollipop 
+      </h1>
       <Plot className="plot"
         data={[
             {
@@ -84,9 +87,9 @@ class Lollipop extends Component {
             }
             
         ]}
-        layout={ {width: 750, height: 520, title: 'Lollipop', showlegend: false} }
+        layout={ {width: 750, height: 520,showlegend: false} }
       />
-      <table id="data" class="table table-bordered">
+      <table id="data" >
       <tbody>
         <tr>
             <th> Title </th>

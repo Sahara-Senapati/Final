@@ -20,7 +20,10 @@ const Plot = createPlotlyComponent(Plotly);
 class ColumnLine extends Component {
   render() {
     return (
-      <div>
+      <div className="body">
+      <h1>
+      Column + Line 
+      </h1>
       <Plot className="plot"
         data={[
             {
@@ -41,9 +44,9 @@ class ColumnLine extends Component {
               type: 'bar'
             }
         ]}
-        layout={ {width: 750, height: 520, title: 'Column + Line'} }
+        layout={ {width: 750, height: 520} }
       />
-     <table id="data" class="table table-bordered">
+     <table id="data" >
         
         <tbody>
         <tr>

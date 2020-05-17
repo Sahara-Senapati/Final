@@ -20,7 +20,10 @@ const Plot = createPlotlyComponent(Plotly);
 class Heatmap extends Component {
   render() {
     return (
-      <div>
+      <div className="body">
+      <h1>
+      XY Heatmap
+      </h1>
       <Plot className="plot"
         data={[
             {
@@ -31,9 +34,9 @@ class Heatmap extends Component {
               hoverongaps: false
             }
         ]}
-        layout={ {width:650, height: 650, title: 'XY Heatmap'} }
+        layout={ {width:750, height: 520} }
       />
-      <table id="data" class="table table-bordered">
+      <table id="data" >
         
         <tbody>
         <tr>

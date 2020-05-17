@@ -20,7 +20,10 @@ const Plot = createPlotlyComponent(Plotly);
 class Connected extends Component {
   render() {
     return (
-      <div> 
+      <div className="body">
+      <h1>
+      Connected Scatter Plot
+       </h1>
       <Plot className="plot"
         data={[
           {
@@ -33,9 +36,9 @@ class Connected extends Component {
 
         }
         ]}
-        layout={ {width: 750, height: 520, title: 'Connected Scatter Plot'} }
+        layout={ {width: 750, height: 520} }
       />
-      <table id="data" class="table table-bordered">
+      <table id="data" >
         
         <tbody>
         <tr>
