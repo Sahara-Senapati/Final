@@ -18,32 +18,36 @@ const Plot = createPlotlyComponent(Plotly);
 
 
 class ColumnLine extends Component {
+ constructor(props) {
+        super(props);
+        this.state = {size: 12};
+      }
   render() {
-    return (
+       
+    return (    
       <div className="body">
       <h1>
       Column + Line 
       </h1>
       <Plot className="plot"
         data={[
-            {
-              x: [1, 2, 3, 4, 5, 6],
-              y: [2.8, 3.3, 4.7, 1.7, 2.5, 0.7],
-              type: 'lines+scatter',
-              line: {
-                  width:4
-              },
-              marker:{
-                  size:10
-              }
-            },
+        {
+          x: [1, 2, 3, 4, 5, 6],
+          y: [2.8, 3.3, 4.7, 1.7, 2.5, 0.7],
+          type: 'lines+scatter',
+          line: {
+              width:4
+          },
+          marker:{
+              size:{this.state.size}
+          }
+        },
 
-             {
-              x: [1, 2, 3, 4, 5, 6],
-              y: [6, 5.2, 4.3, 3.9, 3.3, 1.4],
-              type: 'bar'
-            }
-        ]}
+         {
+          x: [1, 2, 3, 4, 5, 6],
+          y: [6, 5.2, 4.3, 3.9, 3.3, 1.4],
+          type: "bar"
+        }]}
         layout={ {width: 750, height: 520} }
       />
      <table id="data" >
